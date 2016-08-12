@@ -26,6 +26,14 @@ var bytes = yourListOfT.ToWorksheet("Worksheet")
                         .ToXlsx();
 ```
 
+Append another worksheet
+```
+var bytes = yourListOfT
+                .ToWorksheet("T things")
+                .NextWorksheet(yourListOfK, "K things")
+                .ToXlsx();
+```
+
 With Custom formatting
 ```
 var bytes = yourListOfT.ToWorksheet("Title", configureHeader: f =>
@@ -40,14 +48,6 @@ var bytes = yourListOfT.ToWorksheet("Title", configureHeader: f =>
                                         f.Style.WrapText = true;
                                     }, configureColumn: f => f.AutoFit())
                         .ToXlsx();
-```
-
-Append another worksheet
-```
-var bytes = yourListOfT
-                .ToWorksheet("T things")
-                .NextWorksheet(yourListOfK, "K things")
-                .ToXlsx();
 ```
 
 Custom formatting can be specified in the following ways:
