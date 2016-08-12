@@ -34,6 +34,14 @@ var bytes = yourListOfT
                 .ToXlsx();
 ```
 
+Get the excel package instead of just bytes
+```
+var package = yourListOfT
+                .ToWorksheet("Worksheet Name")
+                .WithColumn(x => x.Name, "Name")
+                .ToPackage();
+```
+
 With Custom formatting
 ```
 var bytes = yourListOfT.ToWorksheet("Title", configureHeader: f =>
