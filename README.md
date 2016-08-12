@@ -1,5 +1,5 @@
 # ToXlsx
-Extension methods to convert IList&lt;T> to Excel files using EPPlus
+Extension methods to easily & fluently convert IList&lt;T> to Excel files using EPPlus
 
 A Minimum Usage
 ```
