@@ -11,7 +11,7 @@ With a named worksheet
 var bytes = yourListOfT.ToWorksheet("Worksheet Name").ToXlsx();
 ```
 
-Specifying Columns
+Specifying Columns (previous examples columns are inferred using reflection)
 ```
 var bytes = yourListOfT.ToWorksheet("Worksheet")
                         .WithColumn(x => x.Id, "ID")
